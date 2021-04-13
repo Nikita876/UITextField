@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UITextField" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1YX-wJ-xdx">
+                                <rect key="frame" x="70" y="89" width="274" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOi-16-Bju">
+                                <rect key="frame" x="55" y="171" width="304" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ful-Wz-yjz">
+                                <rect key="frame" x="68" y="245" width="278" height="31"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="SZI-KN-ZQY"/>
+                                </connections>
+                            </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Pqq-fz-5Yk">
+                                <rect key="frame" x="70" y="338" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLW-xL-IeW">
+                                <rect key="frame" x="70" y="433" width="274" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G5s-8j-uVx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1YX-wJ-xdx" secondAttribute="trailing" constant="70" id="7K3-bY-A0L"/>
+                            <constraint firstItem="eLW-xL-IeW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="DcO-85-mLd"/>
+                            <constraint firstItem="1YX-wJ-xdx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="FUj-eR-lxY"/>
+                            <constraint firstItem="Pqq-fz-5Yk" firstAttribute="top" secondItem="ful-Wz-yjz" secondAttribute="bottom" constant="63" id="G55-2Y-FbO"/>
+                            <constraint firstItem="Pqq-fz-5Yk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="VIN-g8-vsk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pqq-fz-5Yk" secondAttribute="trailing" constant="70" id="Wdd-ah-a91"/>
+                            <constraint firstItem="vOi-16-Bju" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="XHO-jS-dWo"/>
+                            <constraint firstItem="ful-Wz-yjz" firstAttribute="top" secondItem="vOi-16-Bju" secondAttribute="bottom" constant="53" id="ZC0-74-T0j"/>
+                            <constraint firstItem="eLW-xL-IeW" firstAttribute="top" secondItem="Pqq-fz-5Yk" secondAttribute="bottom" constant="61" id="aKt-Mw-zzs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ful-Wz-yjz" secondAttribute="trailing" constant="70" id="aol-9n-a5c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vOi-16-Bju" secondAttribute="trailing" constant="55" id="b8Y-by-tCw"/>
+                            <constraint firstItem="1YX-wJ-xdx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="hOD-AQ-TuB"/>
+                            <constraint firstItem="ful-Wz-yjz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="nRY-Ek-Ic6"/>
+                            <constraint firstItem="vOi-16-Bju" firstAttribute="top" secondItem="1YX-wJ-xdx" secondAttribute="bottom" constant="51" id="tvA-ph-nuu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eLW-xL-IeW" secondAttribute="trailing" constant="70" id="uHw-jn-t3G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="eLW-xL-IeW" id="3QT-E1-7sx"/>
+                        <outlet property="label" destination="vOi-16-Bju" id="3zX-A6-Ml6"/>
+                        <outlet property="slider" destination="ful-Wz-yjz" id="zrr-0H-qT6"/>
+                        <outlet property="textField" destination="Pqq-fz-5Yk" id="ZFm-Y9-PzC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="57.589285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
